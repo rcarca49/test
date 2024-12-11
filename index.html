@@ -3,23 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Test Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Interactive & Animated Web Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My GitHub Pages Website</h1>
-  </header>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>My Website</h2>
+      <button class="close-btn" id="closeSidebarBtn">&times;</button>
+    </div>
+    <ul>
+      <li><a href="#" class="tab-link" data-tab="home">Home</a></li>
+      <li><a href="#" class="tab-link" data-tab="about">About</a></li>
+      <li><a href="#" class="tab-link" data-tab="services">Services</a></li>
+      <li><a href="#" class="tab-link" data-tab="contact">Contact</a></li>
+    </ul>
+  </div>
 
-  <section>
-    <p>This is a test website hosted on GitHub Pages. Let's add some interactivity!</p>
-    <button id="changeColorBtn">Click to Change Color</button>
-  </section>
+  <!-- Content Area -->
+  <div class="content">
+    <button id="toggleSidebarBtn" class="toggle-btn">&#9776;</button>
+    
+    <div id="home" class="tab-content">
+      <h2>Welcome to Home Page</h2>
+      <p>This is an animated home section with a cool effect when the page loads.</p>
+      <button class="open-modal-btn" id="openModalBtn">Open Modal</button>
+    </div>
 
-  <footer>
-    <p>&copy; 2024 My Test Website</p>
-  </footer>
+    <div id="about" class="tab-content">
+      <h2>About Us</h2>
+      <p>Learn about our mission and values in this section.</p>
+    </div>
 
-  <script src="script.js"></script>
+    <div id="services" class="tab-content">
+      <h2>Our Services</h2>
+      <p>Discover the services we offer in this section.</p>
+    </div>
+
+    <div id="contact" class="tab-content">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us through this section.</p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-modal-btn" id="closeModalBtn">&times;</span>
+      <h2>Modal Title</h2>
+      <p>This is a sample modal window. You can add more content here.</p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
